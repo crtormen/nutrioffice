@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EditCustomerPage correctly 1`] = `
+<div>
+  <h2>
+    Editar Paciente
+  </h2>
+  <CustomerForm
+    customer={
+      Object {
+        "born": "04/04/2012",
+        "email": "bart@gmail.com",
+        "id": "3",
+        "instagram": "bartsalsicha",
+        "name": "Bart",
+        "occupation": "salsicha",
+        "phone": "51991750942",
+      }
+    }
+    onSubmit={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    Excluir Paciente
+  </button>
+</div>
+`;

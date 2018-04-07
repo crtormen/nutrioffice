@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CustomerForm correctly 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Nome completo"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Data de nascimento"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Email"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Celular"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Profissão"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="instagram"
+      type="text"
+      value=""
+    />
+    <button>
+      Salvar Dados
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should render CustomerForm with customer data 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Nome completo"
+      type="text"
+      value="Claudio"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Data de nascimento"
+      type="text"
+      value="02/03/1987"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Email"
+      type="text"
+      value="crtormen@gmail.com"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Celular"
+      type="text"
+      value="51993464776"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Profissão"
+      type="text"
+      value="software engineer"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="instagram"
+      type="text"
+      value="crtormen"
+    />
+    <button>
+      Salvar Dados
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should render error for invalid form submission 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Nome completo"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Data de nascimento"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Email"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Celular"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Profissão"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="instagram"
+      type="text"
+      value=""
+    />
+    <button>
+      Salvar Dados
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should render error for invalid form submission 2`] = `
+<div>
+  <p>
+    Você deve informar seu nome, email e celular.
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Nome completo"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Data de nascimento"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Email"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Celular"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Profissão"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="instagram"
+      type="text"
+      value=""
+    />
+    <button>
+      Salvar Dados
+    </button>
+  </form>
+</div>
+`;

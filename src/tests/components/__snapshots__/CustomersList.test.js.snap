@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CustomersList with customers 1`] = `
+<div>
+  <h2>
+    Customers List
+  </h2>
+  <CustomersListItem
+    born="02/03/1987"
+    email="crtormen@gmail.com"
+    id="1"
+    instagram="crtormen"
+    key="1"
+    name="Claudio"
+    occupation="software engineer"
+    phone="51993464776"
+  />
+  <CustomersListItem
+    born="16/06/1988"
+    email="charline.tormen@gmail.com"
+    id="2"
+    instagram="nutricharlinetormen"
+    key="2"
+    name="Charline"
+    occupation="nutricionista"
+    phone="51991750942"
+  />
+  <CustomersListItem
+    born="04/04/2012"
+    email="bart@gmail.com"
+    id="3"
+    instagram="bartsalsicha"
+    key="3"
+    name="Bart"
+    occupation="salsicha"
+    phone="51991750942"
+  />
+</div>
+`;
+
+exports[`should render CustomersList with empty customer 1`] = `
+<div>
+  <h2>
+    Customers List
+  </h2>
+  <p>
+    Nenhum paciente encontrado.
+  </p>
+</div>
+`;
