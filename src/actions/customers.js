@@ -7,27 +7,27 @@ export const addCustomer = (customer) => ({
 });
 
 //Pass a function instead of a object  
-// export const startAddCustomer = (customerData = {}) => {
-//     return (dispatch, getState) => { 
-//         const uid = getState().auth.uid;
-//         const { //default values
-//             name = '', 
-//             email = '',
-//             phone = '', 
-//             born = '',              
-//             occupation = '', 
-//             instagram = ''
-//         } = customerData;
-//         const customer = { name, email, phone, born, occupation, instagram };
+export const startAddCustomer = (customerData = {}) => {
+    return (dispatch, getState) => { 
+        const uid = getState().auth.uid;
+        const { //default values
+            name = '', 
+            email = '',
+            phone = '', 
+            born = '',              
+            occupation = '', 
+            instagram = ''
+        } = customerData;
+        const customer = { name, email, phone, born, occupation, instagram };
 
-//         return database.ref(`users/${uid}/customers`).push(customer).then((ref) => { 
-//             dispatch(addCustomer({
-//                 id: ref.key,
-//                 ...customer
-//             }));
-//         });
-//     };
-// };
+        return database.ref(`users/${uid}/customers`).push(customer).then((ref) => { 
+            dispatch(addCustomer({
+                id: ref.key,
+                ...customer
+            }));
+        });
+    };
+};
 
 //Action generator for EDIT_CUSTOMER
 export const editCustomer = (id, updates) => ({
@@ -36,14 +36,14 @@ export const editCustomer = (id, updates) => ({
     updates
 });
 
-// export const startEditExpense = (id, updates) => {
-//     return (dispatch, getState) => {
-//         const uid = getState().auth.uid;
-//         return database.ref(`users/${uid}/expenses/${id}`).update(updates).then(() => {
-//             dispatch(editExpense(id, updates));
-//         })
-//     };
-// };
+export const startEditCustomer = (id, updates) => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/customers/${id}`).update(updates).then(() => {
+            dispatch(editCustomer(id, updates));
+        })
+    };
+};
 
 //Action generator for REMOVE_CUSTOMER
 export const removeCustomer = ({ id } = {}) => ({
@@ -51,14 +51,14 @@ export const removeCustomer = ({ id } = {}) => ({
     id
 });
 
-// export const startRemoveExpense = ({ id } = {}) => {
-//     return (dispatch, getState) => {
-//         const uid = getState().auth.uid;
-//         return database.ref(`users/${uid}/expenses/${id}`).remove().then(() => {
-//             dispatch(removeExpense({ id }));
-//         });
-//     };
-// };
+ export const startRemoveCustomer = ({ id } = {}) => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        return database.ref(`users/${uid}/customers/${id}`).remove().then(() => {
+            dispatch(removeCustomer({ id }));
+        });
+    };
+};
 
 
 //Action generator for SET_CUSTOMERS
@@ -67,21 +67,21 @@ export const setCustomers = (customers) => ({
     customers
 });
 
-//Action Generator START_SET_EXPENSES
-// export const startSetExpenses = () => {
-//     return (dispatch, getState) => {
-//         const uid = getState().auth.uid;
-//         //returns a promises, so that when using startSetExpenses, we can use "then"
-//         return database.ref(`users/${uid}/expenses`).once('value').then((snapshot) => {
-//             let expenses = [];
-//             snapshot.forEach((childSnapshot) => {
-//                 expenses.push({
-//                     id: childSnapshot.key,
-//                     ...childSnapshot.val()
-//                 })
-//             });
+//Action Generator START_SET_CUSTOMERS
+export const startSetCustomers = () => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid;
+        //returns a promises, so that when using startSetCustomers, we can use "then"
+        return database.ref(`users/${uid}/customers`).once('value').then((snapshot) => {
+            let customers = [];
+            snapshot.forEach((childSnapshot) => {
+                customers.push({
+                    id: childSnapshot.key,
+                    ...childSnapshot.val()
+                })
+            });
 
-//             dispatch(setExpenses(expenses));
-//         });        
-//     };
-// };
+            dispatch(setCustomers(customers));
+        });        
+    };
+};

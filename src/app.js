@@ -4,6 +4,7 @@ import 'react-dates/initialize';
 import { Provider } from 'react-redux';
 import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
+import {startSetCustomers} from './actions/customers';
 import { login, logout } from './actions/auth';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -31,18 +32,20 @@ const renderApp = () => {
 
 //Bootstrap
 ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
-renderApp();
+//renderApp();
 
-// firebase.auth().onAuthStateChanged((user) => {
-//     if (user){ //fetch data from user and render the app on dashboard
-//         store.dispatch(login(user.uid));
-//         renderApp();
-//         if (history.location.pathname === '/') {
-//             history.push('/dashboard');
-//         }
-//     } else { // direct visitor to login page
-//         store.dispatch(logout());
-//         renderApp();
-//         history.push('/'); 
-//     }
-// })
+firebase.auth().onAuthStateChanged((user) => {
+    if (user){ //fetch data from user and render the app on dashboard
+        store.dispatch(login(user.uid));
+        store.dispatch(startSetCustomers()).then(() => {
+            renderApp();
+            if (history.location.pathname === '/') {
+                history.push('/dashboard');
+            }
+        })
+    } else { // direct visitor to login page
+        store.dispatch(logout());
+        renderApp();
+        history.push('/'); 
+    }
+})

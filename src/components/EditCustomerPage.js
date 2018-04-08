@@ -1,19 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { editCustomer, removeCustomer } from '../actions/customers';
+import { startEditCustomer, startRemoveCustomer } from '../actions/customers';
 import CustomerForm from './CustomerForm';
 
 export class EditCustomerPage extends React.Component {
 
     onSubmit = (customer) => {
         //startEditExpense
-        this.props.editCustomer(this.props.customer.id, customer);
+        this.props.startEditCustomer(this.props.customer.id, customer);
         this.props.history.push('/dashboard');
     }
 
     onRemove = () => {
         //startRemoveExpense
-        this.props.removeCustomer({id: this.props.customer.id});
+        this.props.startRemoveCustomer({id: this.props.customer.id});
         this.props.history.push('/dashboard');
     }
 
@@ -36,8 +36,8 @@ const mapStateToProps = (state, props) => ({
 });
 
 const mapDispatchToProps = (dispatch, props) => ({
-    editCustomer: (id, customer) => dispatch(editCustomer(id, customer)),
-    removeCustomer: (id) => dispatch(removeCustomer(id))
+    startEditCustomer: (id, customer) => dispatch(startEditCustomer(id, customer)),
+    startRemoveCustomer: (id) => dispatch(startRemoveCustomer(id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditCustomerPage);
