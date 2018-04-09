@@ -1,10 +1,12 @@
 import React from 'react';
 import CustomersList from './CustomersList';
-import { Link } from 'react-router-dom';
+import CustomersListFilters from './CustomersListFilters';
+import CustomersSummary from './CustomersSummary';
 
 export const DashboardPage = () => (
     <div>
-        <p><Link to="/create">+ Novo Paciente</Link></p>
+        <CustomersSummary />
+        <CustomersListFilters />
         <CustomersList />        
     </div>
 );

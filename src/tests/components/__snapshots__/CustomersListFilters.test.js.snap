@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CustomersListFilters correctly 1`] = `
+<div>
+  <input
+    onChange={[Function]}
+    placeholder="Busca..."
+    type="text"
+    value=""
+  />
+</div>
+`;

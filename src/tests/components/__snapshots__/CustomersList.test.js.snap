@@ -3,7 +3,7 @@
 exports[`should render CustomersList with customers 1`] = `
 <div>
   <h2>
-    Customers List
+    Lista de Pacientes
   </h2>
   <CustomersListItem
     born="02/03/1987"
@@ -41,7 +41,7 @@ exports[`should render CustomersList with customers 1`] = `
 exports[`should render CustomersList with empty customer 1`] = `
 <div>
   <h2>
-    Customers List
+    Lista de Pacientes
   </h2>
   <p>
     Nenhum paciente encontrado.

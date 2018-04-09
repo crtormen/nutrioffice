@@ -2,14 +2,8 @@
 
 exports[`should render DashboardPage correctly 1`] = `
 <div>
-  <p>
-    <Link
-      replace={false}
-      to="/create"
-    >
-      + Novo Paciente
-    </Link>
-  </p>
+  <Connect(CustomersSummary) />
+  <Connect(CustomersListFilters) />
   <Connect(CustomersList) />
 </div>
 `;

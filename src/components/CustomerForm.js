@@ -1,5 +1,6 @@
 import React from 'react';
-
+// import moment from 'moment';
+// import { SingleDatePicker } from 'react-dates';
 
 export default class CustomerForm extends React.Component {
     constructor(props) {
